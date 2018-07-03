@@ -1,10 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class AddFishForm extends React.Component {
 	nameRef = React.createRef();
 	priceRef = React.createRef();
 	descRef = React.createRef();
 	imageRef = React.createRef();
+
+	static propTypes = { addFish: PropTypes.func }
 	createFish = (e) => {
 		// 1. stop form from submitting
 		e.preventDefault();
